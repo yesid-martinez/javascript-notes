@@ -1,0 +1,26 @@
+{
+  "name": "javascript-notes",
+  "description": "A collection of JavaScript notes and examples",
+  "main": "index.js",
+
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  },
+
+  "keywords": [
+    "JavaScript",
+    "notes",
+    "examples",
+    "learning"
+  ],
+  
+
+  "author": "Yesid Martinez",
+  "license": "MIT"
+  
+}
