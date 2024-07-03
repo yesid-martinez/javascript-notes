@@ -1,18 +1,76 @@
-# Repositorio de Apuntes de JavaScript
+# JavaScript Notes Repository
 
-Este repositorio es una colección de apuntes de JavaScript, donde guardo mis notas sobre el lenguaje de programación y conceptos relacionados. Aquí encontrarás información útil y organizada para aprender y repasar JavaScript.
+This repository is a collection of JavaScript notes where I store my insights about the programming language and related concepts. Here, you'll find useful and organized information to learn and review JavaScript.
 
-## Funcionamiento
+## Functionality
 
-Cada archivo `.js` debe conectarse independiente al archivo `app.html`.
+Each `.js` file can be executed automatically with `nodemon`, which simplifies the development and testing process.
 
-Para el correcto funcionamiento de los ejemplos, los archivos `dom.js`, `eventos.js` y `localstorage.js` tienen fragmentos de código html complementarios que se encuentran comentados en `app.html`.
-Además, los archivos `eventos.js` y `dom.js` deben conectarse del mismo modo con sus respectivos archivos CSS en `eventos/style.css` y `dom/style.css` respectivamente.
+## Environment Setup
 
-## Cómo colaborar
+To facilitate automatic execution of JavaScript files whenever they are saved, this project uses `nodemon` as a development dependency.
 
-¡Tu colaboración es bienvenida! Si deseas contribuir a este repositorio, simplemente realiza un pull request con tus cambios propuestos. Agradezco cualquier contribución para mejorar este repositorio.
+## Installation
 
-## Contacto
+First, clone the repository:
 
-Si tienes alguna pregunta o sugerencia relacionada con mis apuntes, puedes contactarme a través de mi correo electrónico: [wujibifan.hh@gmail.com](mailto:wujibifan.hh@gmail.com)
+```bash
+git clone https://github.com/yesid-martinez/javascript-notes.git
+
+cd javascript-notes
+```
+
+Then, install the dependencies:
+
+```bash
+npm install
+```
+
+## Usage
+
+To automatically run the `archivo.js` file every time it is saved, use the following command:
+
+```bash
+npm run dev
+```
+
+To run the file just once:
+
+```bash
+npm start
+```
+
+## Project Structure
+
+`dom.js`, `eventos.js`, and `localstorage.js` have complementary HTML code snippets commented in `app.html.`
+
+The `eventos.js` and `dom.js` files should also be connected to their respective CSS files in `eventos/style.css` and `dom/style.css` respectively.
+
+### Adding `nodemon` to the Project
+
+In addition to modifying the README.md, ensure you have added `nodemon` as a development dependency and updated the `package.json` file with the necessary scripts. Here is an example of the `package.json` file:
+
+```json
+{
+  "name": "javascript-notes-repository",
+  "version": "1.0.0",
+  "description": "Collection of JavaScript notes.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
+```
+
+## How to Contribute
+
+Your contributions are welcome! If you would like to contribute to this repository, simply make a pull request with your proposed changes. I appreciate any contributions to improve this repository.
+
+## Contact
+
+If you have any questions or suggestions regarding my notes, you can contact me via email: [martinezy.dev@gmail.com](mailto:martinezy.dev@gmail.com)
