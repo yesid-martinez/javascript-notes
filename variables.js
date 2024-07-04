@@ -1,32 +1,42 @@
-// Variables => Contenedores para almacenar datos. 
+// Variables => Containers for data storage and manipulation. 
 
-// var => Tiene alcance de función o de ámbito global, dependiendo de dónde se declare.
-// Actualmente `var` es no recomendable usarlo y usar en cambio `let` y `const`.
+// Definition of a variable.
+var variableName;
 
-function ejemploVar() {
-  var x = 10; // Declaración de una variable con var
-//   console.log(x); // 10
+// Assignment of a variable.
+variableName = "Value";
+
+console.log(variableName); // Output: Value 
+
+// var => Has function scope or global scope, depending on the context of the declaration.
+// Due to its potential for unexpected behavior, it's generally advised to use `let` and `const` introduced in ES6.
+
+
+function varExample() {
+  var x = 10; // Variable declaration with function scope using var
+  console.log(x); // 10
 };
-ejemploVar();
-// console.log(x); // Error: x no está definido fuera de la función
+varExample();
+// console.log(x); // Error: x is not defined outside the function scope
 
 
 
-// let -> ECMAScript 2015 (ES6)
-// Tiene alcance de bloque: La variable solo está disponible dentro del bloque en el que se declara.
+// let => Introduced in ECMAScript 2015 (ES6)
+// Declares a block-scoped local variable
+// Provides a more predictable scope compared to `var`.
 
-function ejemploLet() {
-  let x = 10; // Declaración de una variable con let
+function letExample() {
+  let x = 10; // Declaration of a variable with let
   if (true) {
     let y = 20;
     // console.log(x); // 10
     // console.log(y); // 20
   };
 //   console.log(x); // 10
-//   console.log(y); // Error: y no está definido en este ámbito
+//   console.log(y); // Error: y is not defined in this scope
 };
 
-ejemploLet();
+letExample();
 
 
 
@@ -34,10 +44,10 @@ ejemploLet();
 // Se utiliza para declarar variables con un valor constante.
 // El valor no se puede reasignar después de su inicialización y su alcance es de bloque.
 
-function ejemplo() {
-  const PI = 3.1416; // Declaración de una constante con const
+function constExample() {
+  const PI = 3.1416; // Declaration of a constant with const
   console.log(PI); // 3.1416
-//   PI = 3.14; // Error: no se puede reasignar una constante
+//   PI = 3.14; // Error: Unable to remap a constant
 }
 
-ejemplo();
+constExample();
