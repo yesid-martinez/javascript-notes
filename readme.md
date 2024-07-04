@@ -28,7 +28,11 @@ npm install
 
 ## Usage
 
-To automatically run the `archivo.js` file every time it is saved, use the following command:
+To run a Node.js file, use the following command:
+
+node archivo.js
+
+To automatically run the `file.js` file every time it is saved, use the following command:
 
 ```bash
 npm run dev
