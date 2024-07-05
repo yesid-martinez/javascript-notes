@@ -30,18 +30,21 @@ npm install
 
 To run a Node.js file, use the following command:
 
-node archivo.js
+```bash
+node file.js
+```
 
 To automatically run the `file.js` file every time it is saved, use the following command:
 
 ```bash
 npm run dev
 ```
+`Note: nodemon is recommended for development to automatically restart your application whenever you make changes. It is not intended for "production" use.`
 
-To run the file just once:
+For executing the application or specific scripts, use node directly:
 
 ```bash
-npm start
+node index.js
 ```
 
 ## Project Structure
