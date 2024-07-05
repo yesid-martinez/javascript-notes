@@ -1,26 +1,47 @@
 class Conditionals{
   executeConditionals(){
+
     let x = 3;
+
+    // Equality Operators
+
+    // Abstract equality with the '==' operator
+    if (x == '3') {
+    console.log('x is equal to \'3\' (using ==)'); // Executes because '5' is converted to a number before comparison
+    } else {
+    console.log('x is not equal to \'3\' (using ==)');
+    }
+
+    // Strict equality with the '===' operator
+    if (x === '3') {
+    console.log('x is equal to \'3\' (using ===)');
+    } else {
+    console.log('x is not equal to \'3\' (using ===)'); // Executes because '5' is not of the same type as x
+    }
+
+    // Use `==` cautiously, as it can lead to unexpected comparisons due to automatic type conversion.
+    // Opt for the use of `===` for strict comparisons, as it avoids automatic type conversions and ensures that types are identical.
+
 
     // if (condition(true)) { instruction }
     if (x === 5) {
-        // console.log("x is equal to 5"); // False -> Ignores the instruction
+        console.log("x is equal to 5"); // False -> Ignores the instruction
     }
 
     // if (condition(true)) { instruction } else { instruction -> condition false }
     if (x === 3) {
-        // console.log("x is equal to 3"); // true -> Executes the instruction
+        console.log("x is equal to 3"); // true -> Executes the instruction
     } else {
-        // console.log("x is different from 3"); // false -> Ignores the instruction
+        console.log("x is different from 3"); // false -> Ignores the instruction
     }
 
     // if - else - if
     if (x === 1) {
-        // console.log("x is 1");
+        console.log("x is 1");
     } else if (x === 2) {
-        // console.log("x is 2");
+        console.log("x is 2");
     } else if (x === 3) {
-        // console.log("x is 3");
+        console.log("x is 3");
     }
 
     // Classic if - else
@@ -32,12 +53,14 @@ class Conditionals{
     } else {
       secondElement = 5;
     }
-    // Ternary expression => Boolean expression ? true : false
-    secondElement = firstElement === 9 ? 8 : 5;
-    // console.log(`Final value of r = ${r}`);
+    console.log("Second element: ", secondElement); // 5
 
-    let message = firstElement % 2 === 0 ? "is even" : "is odd";
-    // console.log(`${a} ${message}`);
+    // Ternary expression => Boolean = expression ? true : false
+    secondElement = firstElement === 14 ? 2 : 18;
+    console.log("Second element: ", secondElement); // 18
+
+    let response = firstElement % 2 === 0 ? "is even" : "is odd";
+    console.log(`The number ${firstElement} ${response}`);
 
     // Switch => More concise and readable alternative to using multiple nested if-else statements.
     // switch (expression) {
