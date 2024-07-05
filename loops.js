@@ -1,66 +1,64 @@
-// Ciclos de repetición
+// Loops -> Iterations
 
-// Ciclos de recorrido -> Requieren elemento iterable
+// Require iterable element
 
-// - ESTRUCTURA DEL CICLO
-// 1. Inicialización
-// 2. Evaluación de expresión booleana
-// 3. Instrucciones a ejecutar
-// 4.Instrucciones de rompimineto
-
-// Si la expresión booleana nunca es false -> loop
+// Loop Structure
+// 1. Initialization
+// 2. Boolean Expression Evaluation
+// 3. Instructions to be executed
+// 4.Breaking instructions
 
 class Loop {
 
     executeLoop() {
-        // while => while ( condición ) { instrucción }
-        let contador = 0;
+        // while => while ( condition ) { instruction }
+        let counter = 0;
 
-        while(contador < 5){
-            console.log(`El valor del contador es ${contador}`)
-            contador++;
+        while(counter < 5){
+            console.log(`The value of the counter is ${counter}`)
+            counter++;
         }
-        console.log("Fin del while");
-        contador = 0;
+        console.log("End of while");
+        counter = 0;
 
-        // do while => Ejecuta instrucción una vez -> Verifica expresión boolena...
-        // do { instrucción } while ( condición )
+        // do while => Run instruction once -> Verify Boolean expression...
+        // do { instruction } while ( condition )
         do {
-            console.log(`El valor de contador es ${contador}`);
-            contador ++
-        } while (contador <= 5);
-        console.log("Fin del do while");
-        contador = 0;
+            console.log(`The value of the counter is ${counter}`);
+            counter ++
+        } while (counter <= 5);
+        console.log("End of do while");
+        counter = 0;
 
 
-        // for tradicional => for ( contador; condición; incremento ) { instrucción } 
+        // traditional for => for ( counter; condition; increment ) { instruction } 
         let array = [1,2,3,4,5];
 
-        for (let contador = 0; contador < array.length; contador++) {
-            const element = array[contador];
+        for (let counter = 0; counter < array.length; counter++) {
+            const element = array[counter];
             console.log(element);
         }
-        console.log("Fin del for");
-        contador = 0;
+        console.log("End of for");
+        counter = 0;
 
-        // ciclo while + if else 
-        while(contador <= 100){
-            if(contador % 2 === 0){
-                console.log(`El número ${contador} es par`);
+        // while + if else loops 
+        while(counter <= 100){
+            if(counter % 2 === 0){
+                console.log(`The number ${counter} is even`);
             }else{
-                console.log(`Él número ${contador} es impar`);
+                console.log(`The number ${counter} is odd`);
             }
-            contador++;
+            counter++;
         }
 
-        let contador5 = 0;
-        let acumulador = 0;
-        while (contador5 < 5) {
-        console.log(`sumando ${contador5}`);
-        acumulador += contador5;
-        contador5++;
+        counter = 0;
+        let accumulator = 0;
+        while (counter < 5) {
+        console.log(`Qurrent value: ${counter}`);
+        accumulator += counter;
+        counter++;
         }
-        console.log(`El valor de la sumatoria es ${acumulador}`);
+        console.log(`The value of the sum is ${accumulator}`);
     };
 }
 
