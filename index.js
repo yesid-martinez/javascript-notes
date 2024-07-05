@@ -1,2 +1,4 @@
-console.log("Nodemon is working!");
-console.log("Testing nodemon!");
+import Loop from './loops.js';
+
+const loopInstance = new Loop();
+loopInstance.executeLoop();

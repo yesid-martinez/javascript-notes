@@ -2,7 +2,8 @@
   "name": "javascript-notes",
   "description": "A collection of JavaScript notes and examples",
   "main": "index.js",
-
+  "type": "module",
+  
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js"
