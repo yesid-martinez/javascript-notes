@@ -2,6 +2,7 @@ import readline from 'readline';
 
 import Loop from './loops.js';
 import Conditionals from './conditionals.js';
+import MathObj from './objects/mathObj.js';
 
 const rl = readline.createInterface({
     input: process.stdin,
@@ -18,13 +19,17 @@ const executeMethod = (method) => {
         const conditionalsInstance = new Conditionals();
         conditionalsInstance.executeConditionals();
         break;
+        case 'math':
+        const mathObjInstance = new MathObj();
+        mathObjInstance.executeMath();
+        break;
         default:
-        console.log('Opción inválida. Elige "loop" o "conditionals".');
+        console.log('Invalid option.');
         break;
     }
 };
 
-rl.question('Elige qué método ejecutar ("loop" o "conditionals"): ', (answer) => {
+rl.question('Choose which method to run ("loop", "conditionals", "math"):', (answer) => {
     executeMethod(answer.trim().toLowerCase());
 
     rl.close();
